@@ -15,6 +15,9 @@ const Navigation = () => {
                     <li>
                     <Link to="/">Page 2</Link>
                     </li>
+                    <li>
+                    <Link to="/login">Connexion</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
