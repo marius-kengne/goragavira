@@ -1,0 +1,27 @@
+.filter-cont{
+    height: 50px;
+    background-color:beige;
+}
+
+.products-cont{
+    height: 100%;
+    width: 100%;
+    background-color: gainsboro;
+    
+}
+
+img{
+    width: 400px;
+    height: 600px;
+}
+
+.products{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product{
+        margin: 20px;
+    }
