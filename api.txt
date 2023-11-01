@@ -86,3 +86,29 @@
       ]
     }
   },
+
+
+
+{
+  "code": "[jwt_auth] incorrect_password",
+  "message": "<strong>Error:</strong> The password you entered for the username <strong>client</strong> is incorrect. <a href=\"https://eisee-it.o3creative.fr/2023/groupe5/lost-password/?page_id=10\">Lost your password?</a>",
+  "data": {
+    "status": 403
+  }
+}
+
+
+{
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Vpc2VlLWl0Lm8zY3JlYXRpdmUuZnIvMjAyMy9ncm91cGU1IiwiaWF0IjoxNjk4ODQ3NDY4LCJuYmYiOjE2OTg4NDc0NjgsImV4cCI6MTY5OTQ1MjI2OCwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMiJ9fX0.-FjwnE0DuhUWgdeLUtgnoSjKOdZlp-W3py57BUsfsB0",
+  "user_email": "thomas@omicronn.fr",
+  "user_nicename": "client",
+  "user_display_name": "client"
+}
+
+{
+  "code": "[jwt_auth] invalid_username",
+  "message": "<strong>Error:</strong> The username <strong>clent</strong> is not registered on this site. If you are unsure of your username, try your email address instead.",
+  "data": {
+    "status": 403
+  }
+}
