@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import'./Navigation.css'
-import { Nav, NavMenu, NavBtn, NavLink, NavBtnLink, Bars } from './Navigation/NavElements';
+import { Nav, NavMenu, NavLink, NavBtn, NavBtnLink, Bars } from './NavElements.js';
 
 const Navigation = () => {
-    return (
-        <>
+  return (
+    <>
+      <>
            <Nav>
                 <Bars />
                 <NavMenu>
@@ -27,7 +24,8 @@ const Navigation = () => {
                 
             </Nav>
         </>
-    );
+    </>
+  );
 };
 
 export default Navigation;

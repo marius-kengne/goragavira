@@ -1,13 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './Components/Navigation';
+import Navigation from './Components/Navigation/Navigation';
 import Home from './Components/Home/Home';
 import Produits from './Components/Produits/Produits';
 import Login from './Components/Login/Login';
-import Footer2 from './Components/Layout/Footer/Footer2';
-import Testimonial from './Components/Layout/Footer/Testimonial/Testimonial';
-import Panier from './Components/Panier/Panier';
 import Footer from './Components/Layout/Footer/Footer';
+// import Testimonial from './Components/Layout/Footer/Testimonial/Testimonial';
+// import Panier from './Components/Panier/Panier';
+// import Footer from './Components/Layout/Footer/Footer';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         {/* <Footer/> */}
         {/* <Testimonial/> */}
-        <Footer2 />
+        <Footer />
         {/* <Footer /> */}
 
       </div>
