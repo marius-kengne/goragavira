@@ -24,8 +24,8 @@ const Login = () => {
     
         const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/jwt-auth/v1/token';
         const apiParams = {
-            "username": login,
-            "password" : password
+            'username': login,
+            'password' : password
         }
 
         const requestOptions = {
@@ -33,7 +33,32 @@ const Login = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(apiParams)
         };
+        /*
+        const data = {
+            //"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Vpc2VlLWl0Lm8zY3JlYXRpdmUuZnIvMjAyMy9ncm91cGU1IiwiaWF0IjoxNjk4OTM2MDUyLCJuYmYiOjE2OTg5MzYwNTIsImV4cCI6MTY5OTU0MDg1MiwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMiJ9fX0.NakPJjGrYdG3Fbr6gjA5QfwWp5NrnBEP2XTVnWs4Kk8",
+            "user_email": "thomas@omicronn.fr",
+            "user_nicename": "client",
+            "user_display_name": "client",
+            "code" : ""
+        }
 
+        console.log(data);
+        if (data.hasOwnProperty('token')) {
+            setToken(data.token);
+            sessionStorage.setItem('tokenUser', data.token)
+            navigate('/accueil')
+        } else if(data.hasOwnProperty('code')) {
+            const code = data.code
+            if (code.includes("invalid_username")) {
+                setError("Le nom d'utilisateur " +login+ " n'est pas enregistré sur ce site");
+            } else if(code.includes("incorrect_password")) {
+                setError("Le mot de passe saisi pour l'utilisateur " + login + " est incorrect");
+            }else{
+                setError("Identifiants incorrects");
+            }
+        }
+        */
+        
         fetch(apiUrl, requestOptions)
         .then(response => response.json())
         .then(data => {
@@ -57,6 +82,7 @@ const Login = () => {
         .catch(error => {
             console.error('Erreur lors de la récupération des données :', error);
         });
+        
     };
 
     return (

@@ -11,6 +11,7 @@ import CartView from './Components/Panier/CartView';
 import ProductList from './Components/Panier/ProductList';
 import MainProducts from './Components/Panier/MainProducts';
 import Footer from './Components/Layout/Footer/Footer';
+import Commande from './Components/Commande/Commande';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/product/:id" Component={Produit} />
           <Route />
           <Route path="/panier" element={<CartView />} />
+          <Route path="/commande" element={<Commande />} />
         </Routes>
         <Footer />
       </div>

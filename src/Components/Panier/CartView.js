@@ -2,13 +2,29 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import Main from '../Home/Main';
 import './Panier.css';
+import { useNavigate } from 'react-router-dom';
 
 const CartView = () => {
 
+  const navigate = useNavigate()
   const { cartItems } = useContext(CartContext);
 
   console.log("Produits du panier");
   console.log(cartItems);
+  const tokenUser = sessionStorage.getItem('tokenUser') 
+
+  const handleCommander = async(e) => {
+        //e.preventDefault();
+    
+        if (tokenUser && tokenUser != "") {
+            //sessionStorage.setItem('PanierUser', cartItems)
+            navigate('/commande')
+            
+        } else {
+            navigate('/login')
+        }
+
+    };
 
     return (
  
@@ -83,7 +99,7 @@ const CartView = () => {
                         </p>
                     </div>
                     <center>
-                    <button
+                    <button onClick={() => handleCommander(cartItems)}
                             className="checkout-button"
                             disabled={false}
                     >
