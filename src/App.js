@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
 import Home from './Components/Home/Home';
 import Produit from './Components/Produits/Produit';
@@ -19,7 +19,8 @@ function App() {
       <div>
         <Navigation />
         
-        <Routes>
+        <Routes>          
+          <Route path="/*" element={<Navigate to="/accueil" />} />
           <Route exact path="/accueil" Component={Home} />
           <Route path="/produits" Component={ListProduits} />
           <Route path="/page2" />
@@ -27,6 +28,7 @@ function App() {
           <Route path="/product/:id" Component={Produit} />
           <Route />
           <Route path="/panier" element={<CartView />} />
+
         </Routes>
         <Footer />
       </div>
