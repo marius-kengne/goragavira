@@ -28,9 +28,8 @@ const Produit = () => {
 
     return (
         <div>
-            <div className="filter-cont"></div>
             <div className="products-cont">
-                <div className = "products">
+                <div className = "product">
                     <h2>{product.name}</h2>
                     <img className="img"src={product.images}/> 
                     <div dangerouslySetInnerHTML={{__html: product.description}} />
