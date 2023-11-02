@@ -7,7 +7,7 @@
     height: 100%;
     width: 100%;
     background-color: gainsboro;
-    
+
 }
 
 img{
@@ -16,12 +16,14 @@ img{
 }
 
 .products{
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .product{
-        margin: 20px;
-    }
+.product{
+    display: block;
+    text-align: center;
+    margin:50px;
+}
