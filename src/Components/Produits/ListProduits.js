@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Produits.css';
+import { Link } from 'react-router-dom';
 
-const Produits = () => {
+
+const ListProduit = () => {
 
     // useEffect(() => {
     //     axios.get('https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/product')
@@ -35,16 +37,20 @@ const Produits = () => {
         console.error('Erreur lors de la récupération des données :', error);
     });
 
+
     return (
         <div>
             <div className="filter-cont"></div>
             <div className="products-cont">
                 <div className = "products">
                     {products.map((product) => (
-                        <div className='product' key={product.id}>
-                            <h2>{product.name}</h2>
-                            <p>{product.slug}</p>
-                            <img className="img"src={product.images[2].src}/>
+                        <div className='' key={product.id}>
+                            <Link to={`/product/${product.id}`}>
+                                <h2>{product.name}</h2>
+                                <p>{product.slug}</p>
+                                <img className="img"src={product.images[2].src}/>
+                                {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -53,6 +59,4 @@ const Produits = () => {
     );
 };
 
-export default Produits;
-
-
+export default ListProduit;
