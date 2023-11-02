@@ -5,7 +5,7 @@ import './Panier.css';
 
 const CartView = () => {
 
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   console.log("Produits du panier");
   console.log(cartItems);
@@ -38,8 +38,8 @@ const CartView = () => {
                             </button>
                             <div className="quantite">
                                 <button style={{ margin: "1%" }} onClick={(e) => {
-                                    /*
-                                    setPanierProduits((prevPanierProduits) => {
+                                    
+                                    setCartItems((prevPanierProduits) => {
                                     const updatePanier = prevPanierProduits.map(
                                         (prevItem) =>
                                         prevItem.produit.id === item.produit.id
@@ -48,15 +48,15 @@ const CartView = () => {
                                         : prevItem
                                         );
                                         return updatePanier;
-                                    })*/
+                                    })
                                 }}
                                 >
                                 +
                                 </button>
                                 <p className='quant'>{item.quantite} </p>
                                 <button onClick={(e) => {
-                                    /*
-                                setPanierProduits((prevPanierProduits) => {
+                                    
+                                setCartItems((prevPanierProduits) => {
                                     const updatePanier = prevPanierProduits.map(
                                     (prevItem) => prevItem.produit.id === item.produit.id
                                     ? { ...prevItem, quantite:
@@ -64,7 +64,7 @@ const CartView = () => {
                                     : prevItem
                                     );
                                     return updatePanier;
-                                })*/
+                                })
                                 }}
                                 >
                                 -

@@ -61,18 +61,18 @@ const Footer2 = () => {
         <section className=''>
           <MDBRow>
             <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-              <h5 className='text-uppercase'>Entreprise</h5>
+              <h5 className='text-uppercase'>Groupe5-Woocommerce</h5>
               <p>
                 Notre entreprise est dédiée à fournir des produits de haute qualité à nos clients. 
                 Nous nous engageons à offrir une expérience de shopping exceptionnelle, en mettant l'accent sur la satisfaction du client.
   
-                Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. 
-                Notre équipe est là pour vous aider du lundi au vendredi, de 9h à 18h.
+                {/* Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. 
+                Notre équipe est là pour vous aider du lundi au vendredi, de 9h à 18h. */}
               </p>
             </MDBCol>
 
             <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-              <h5 className='text-uppercase'>Produits</h5>
+              <h5 className='text-uppercase'>Produits Utiles</h5>
 
               <ul className='list-unstyled mb-0'>
                 <li>
