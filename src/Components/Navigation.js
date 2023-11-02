@@ -19,6 +19,9 @@ const Navigation = () => {
                     <li>
                     <Link to="/login">Connexion</Link>
                     </li>
+                    <li>
+                        <Link to="/cart">Mon panier</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
