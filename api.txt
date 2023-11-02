@@ -1,0 +1,114 @@
+{
+    "id": 141,
+    "date": "2023-10-29T14:14:47",
+    "date_gmt": "2023-10-29T14:14:47",
+    "guid": {
+      "rendered": "https://eisee-it.o3creative.fr/2023/thomas/?page_id=141"
+    },
+    "modified": "2023-10-31T14:04:49",
+    "modified_gmt": "2023-10-31T14:04:49",
+    "slug": "accueil",
+    "status": "publish",
+    "type": "page",
+    "link": "https://eisee-it.o3creative.fr/2023/groupe5/accueil/",
+    "title": {
+      "rendered": "Accueil"
+    },
+    "content": {
+      "rendered": "\n<p><strong>Bienvenue sur ECAM Ecommerce !</strong></p>\n\n\n\n<p>La destination idéale pour vos achats en ligne</p>\n\n\n\n<p>[Insérez ici une image représentative de votre marque ou de quelques-uns de vos produits phares]</p>\n\n\n\n<p><em>Explorez notre collection diversifiée</em></p>\n\n\n\n<p>Plongez dans notre collection soigneusement sélectionnée, comprenant des produits allant des dernières tendances en matière de mode à des gadgets électroniques innovants, en passant par des articles pour la maison élégants. Chez ECAM Ecommerce, nous avons ce qu&#8217;il vous faut pour simplifier votre style de vie.</p>\n\n\n\n<p><em>Offres spéciales exclusives</em></p>\n\n\n\n<p>Profitez de nos offres spéciales exclusives pour faire des économies sur vos achats préférés. Soyez à l&#8217;affût de nos promotions hebdomadaires et de nos offres à durée limitée. Abonnez-vous à notre newsletter pour rester informé des dernières offres et des nouveautés.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Bienvenue sur ECAM Ecommerce ! La destination idéale pour vos achats en ligne [Insérez ici une image représentative de votre marque ou de quelques-uns de vos produits phares] Explorez notre collection diversifiée Plongez dans notre collection soigneusement sélectionnée, comprenant des produits allant des dernières tendances en matière de mode à des gadgets électroniques innovants, en [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "footnotes": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/pages/141"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/comments?post=141"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 3,
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/pages/141/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 145,
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/pages/141/revisions/145"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/media?parent=141"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+
+
+
+{
+  "code": "[jwt_auth] incorrect_password",
+  "message": "<strong>Error:</strong> The password you entered for the username <strong>client</strong> is incorrect. <a href=\"https://eisee-it.o3creative.fr/2023/groupe5/lost-password/?page_id=10\">Lost your password?</a>",
+  "data": {
+    "status": 403
+  }
+}
+
+
+{
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Vpc2VlLWl0Lm8zY3JlYXRpdmUuZnIvMjAyMy9ncm91cGU1IiwiaWF0IjoxNjk4ODQ3NDY4LCJuYmYiOjE2OTg4NDc0NjgsImV4cCI6MTY5OTQ1MjI2OCwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMiJ9fX0.-FjwnE0DuhUWgdeLUtgnoSjKOdZlp-W3py57BUsfsB0",
+  "user_email": "thomas@omicronn.fr",
+  "user_nicename": "client",
+  "user_display_name": "client"
+}
+
+{
+  "code": "[jwt_auth] invalid_username",
+  "message": "<strong>Error:</strong> The username <strong>clent</strong> is not registered on this site. If you are unsure of your username, try your email address instead.",
+  "data": {
+    "status": 403
+  }
+}
