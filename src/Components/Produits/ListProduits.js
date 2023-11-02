@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Produits.css';
 import { Link } from 'react-router-dom';
-
+import '../Produits/Produits.css';
+import { CartContext } from '../Panier/CartContext';
 
 const ListProduit = () => {
 
+    const { addToCart } = useContext(CartContext);
     // useEffect(() => {
     //     axios.get('https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/product')
     //       .then((response) => {
@@ -51,6 +53,7 @@ const ListProduit = () => {
                                 <div className="price">  {product.price} €</div>
                                 {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
                             </Link>
+                            <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button>
                         </div>
                     ))}
                 </div>
