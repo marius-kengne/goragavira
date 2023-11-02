@@ -322,3 +322,8 @@ body {
 .checkout-section .checkout-button:hover {
     background-color: #4c5cb6;
 }
+
+.panier{
+    margin-top: 50px;
+    min-height: 500px;
+}
