@@ -232,6 +232,7 @@ body {
     transition: background-color 0.3s ease-in-out;
     font-size: 1.2rem;
     float: left;
+    
 }
  
 .panier .checkout-button:hover {
@@ -309,7 +310,9 @@ body {
  
 .checkout-section {
     float: right;
-    margin: 0;
+    /*margin: 0;*/
+    margin-right: 500px;
+    margin-left: 500px;
 }
  
 .checkout-section .checkout-button {

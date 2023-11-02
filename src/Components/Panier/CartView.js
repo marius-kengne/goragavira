@@ -82,12 +82,14 @@ const CartView = () => {
                                 {} €
                         </p>
                     </div>
+                    <center>
                     <button
                             className="checkout-button"
                             disabled={false}
                     >
-                        Proceder au paiement
+                        Commander
                     </button>
+                    </center>
                     </div>
                 </div>
             )}
