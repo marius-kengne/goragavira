@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
@@ -91,6 +92,10 @@ const Login = () => {
                 <Button className='mt-4' variant="primary" type="submit">
                 Se connecter
                 </Button>
+
+                <Link to="/register">
+                <Button variant="secondary">Inscription</Button>
+                </Link>
             </Form>
             </Col>
         </Row>

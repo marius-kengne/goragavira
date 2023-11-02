@@ -11,6 +11,7 @@ import CartView from './Components/Panier/CartView';
 import ProductList from './Components/Panier/ProductList';
 import MainProducts from './Components/Panier/MainProducts';
 import Footer from './Components/Layout/Footer/Footer';
+import Register from './Components/Login/Register';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/produits" Component={ListProduits} />
           <Route path="/page2" />
           <Route path="/login" Component={Login}/>
+          <Route path="/register" Component={Register}/>
           <Route path="/product/:id" Component={Produit} />
           <Route />
           <Route path="/panier" element={<CartView />} />
