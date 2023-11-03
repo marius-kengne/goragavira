@@ -96,19 +96,22 @@ const Login = () => {
     return (
         <Container>
         <Row className="connexion">
-            <h2 className='text-center mt-4'>Connexion</h2>
+            <h2 className='text-center mt-4 '>Connexion</h2>
 
             {error && <Alert variant="danger">{error}</Alert>}
 
-            <Form onSubmit={handleLogin}>
-                <Form.Group controlId="formBasicEmail">
-                <Form.Label>Identifiant</Form.Label>
-                <Form.Control
-                    type="login"
-                    placeholder="Entrez votre identifiant"
-                    value={login}
-                    onChange={(e) => setLogin(e.target.value)}
-                />
+            <Col xs={0} md={2}></Col>
+            <Col xs={12} md={8}>
+
+            <Form onSubmit={handleLogin} className='form-control'>
+                <Form.Group controlId="formBasicEmail" className='mt-4'>
+                    <Form.Label>Nom d'utilisateur</Form.Label>
+                    <Form.Control
+                        type="login"
+                        placeholder="Entrez votre identifiant"
+                        value={login}
+                        onChange={(e) => setLogin(e.target.value)}
+                    />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword" className='mt-4'>
@@ -124,12 +127,15 @@ const Login = () => {
                 {/* <Button className='connect-but' variant="primary" type="submit">
                 Se connecter
                 </Button> */}
-                <div className='text-center mt-4'>
+                <div className='text-center mt-4 mb-4'>
                     <Button variant="primary" type="submit" style = {{background:"black"}}>
                         Se connecter
                     </Button>
                 </div>
             </Form>
+
+            </Col>
+            
         </Row>
         </Container>
        
