@@ -57,7 +57,7 @@ const Commande = () => {
                 
             
                 const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wc/v3/';
-                const data = {
+                const dataApi = {
                     "payment_method": "bacs",
                     "payment_method_title": "Direct Bank Transfer",
                     "set_paid": true,
@@ -93,7 +93,7 @@ const Commande = () => {
                     ]
                 }
         
-                console.log("affichage valeur de data" +JSON.stringify(data));
+                console.log("affichage valeur de data" +JSON.stringify(dataApi));
         
                 console.log("affichage valeur de " +delivery);
                 console.log("affichage valeur de " +payment);
@@ -103,7 +103,7 @@ const Commande = () => {
                 headers: {
                     'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`),
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(dataApi)
                 })
                 .then(response => response.json())
                 .then(result => {

@@ -25,6 +25,16 @@ const ListProduit = () => {
                 url += `?category=25`;
             }else if(searchCategory == "Compostelle"){
                 url += `?category=22`;
+            }else if(searchCategory === "Dos Nu"){
+                url += `?category=23`;
+            }else if(searchCategory === "Cubisme"){
+                url += `?category=24`;
+            } else if(searchCategory === "Compostelle"){
+                url += `?category=22`;
+            } if(searchCategory === "Volcanique"){
+                url += `?category=25`;
+            } if(searchCategory === "Damier"){
+                url += `?category=27`;
             }
             else{
                 url += `?category=${searchCategory}`;
@@ -49,15 +59,8 @@ const ListProduit = () => {
     }, [searchCategory]);
 
     const handleSearch = () => {
-
-        if(searchCategory == "Volcanique"){
-            setCategory(25);
-        }else if(searchCategory == "Compostelle"){
-            setCategory(22);
-        }else {
-            setCategory(searchCategory);
-        }
         
+        setCategory(searchCategory);
     };
 
     return (
