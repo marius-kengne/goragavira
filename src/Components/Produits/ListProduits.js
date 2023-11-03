@@ -3,7 +3,7 @@ import './Produits.css';
 import { Link } from 'react-router-dom';
 import '../Produits/Produits.css';
 import { CartContext } from '../Panier/CartContext';
-import { FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowLeft, FaSearch } from 'react-icons/fa';
 
 const ListProduit = () => {
 
@@ -72,7 +72,7 @@ const ListProduit = () => {
                         value={searchCategory}
                         onChange={(e) => setSearchCategory(e.target.value)}
                     />
-                    <button onClick={handleSearch}>Rechercher</button>
+                    <button onClick={handleSearch}><FaSearch/></button>
                 </div>
             
             <div className="products-cont">

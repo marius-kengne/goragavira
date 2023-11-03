@@ -83,7 +83,10 @@ const Produit = ({ }) => {
           </select>
         </div>
         <div className='add-cont'>
-          <button className='add-but' onClick={() => addToCart(product)}>Ajouter au panier</button>
+          <button className='add-but' onClick={() => {
+                                    addToCart(product)
+                                    window.alert("Produit ajouté avec success !");
+                                }}>Ajouter au panier</button>
         </div>
         <div>
           <div className="htmlDetailText" onClick={toggleDropdown}>
