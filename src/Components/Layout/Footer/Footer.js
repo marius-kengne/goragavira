@@ -1,11 +1,12 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBIcon, MDBInput, MDBCol, MDBRow, MDBBtn } from 'mdb-react-ui-kit';
+import './Footer.css'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const Footer2 = () => {
+const Footer = () => {
   return (
-    <MDBFooter className='text-center' color='white' bgColor='dark'>
+    <MDBFooter className='text-center footer-text' color='white' bgColor='dark'>
       <MDBContainer className='p-4'>
         {/* <section className='mb-3 d-flex justify-content-center justify-content-lg-between p-3 border-bottom'> */}
         <section className='mb-3 d-flex justify-content-center p-3 border-bottom' >
@@ -63,8 +64,8 @@ const Footer2 = () => {
             <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
               <h5 className='text-uppercase'>Groupe5-Woocommerce</h5>
               <p>
-                Notre entreprise est dédiée à fournir des produits de haute qualité à nos clients. 
-                Nous nous engageons à offrir une expérience de shopping exceptionnelle, en mettant l'accent sur la satisfaction du client.
+                Notre entreprise est dédiée à fournir des produits de haute qualité à nos clients et engage  
+                à offrir une expérience de shopping exceptionnelle en ligne, en mettant l'accent sur leurs satisfactions.
   
                 {/* Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. 
                 Notre équipe est là pour vous aider du lundi au vendredi, de 9h à 18h. */}
@@ -154,4 +155,4 @@ const Footer2 = () => {
   );
 };
 
-export default Footer2;
+export default Footer;

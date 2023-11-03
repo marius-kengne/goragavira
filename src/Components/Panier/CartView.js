@@ -2,17 +2,20 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import Main from '../Home/Main';
 import './Panier.css';
+import { auto } from '@popperjs/core';
+
+
 
 const CartView = () => {
 
-  const { cartItems, setCartItems } = useContext(CartContext);
+  const { cartItems, setCartItems, removeFromCart } = useContext(CartContext);
 
   console.log("Produits du panier");
   console.log(cartItems);
 
     return (
  
-        <div className={"panier"}>
+        <div className={"panier"} style={{ maxHeight: '500px', overflowY: auto, marginBottom: '10px', display:'-ms-grid'}}>
             <h2>Mon Panier</h2>
             {cartItems.length === 0 ? (
             <p className="panierVide">Votre panier est vide.</p>
@@ -21,7 +24,7 @@ const CartView = () => {
                 <ul>
                     {cartItems.map((item) => (
                     <li key={item.id} className="panier-item">
-                        <div>
+                        <div className='affichage-item'>
                         <div className="item-info">
                             <div className="item-image">
                             <img src={item.images[1].src} alt={item.slug} />
@@ -33,18 +36,17 @@ const CartView = () => {
                         </div>
                         <div>
                             <div className="item-actions">
-                            <button className="remove-button">
+                            <button className="remove-button" onClick={() => removeFromCart(item.id)}>
                                 Supptimer le produit
                             </button>
+
                             <div className="quantite">
                                 <button style={{ margin: "1%" }} onClick={(e) => {
-                                    
                                     setCartItems((prevPanierProduits) => {
                                     const updatePanier = prevPanierProduits.map(
                                         (prevItem) =>
                                         prevItem.produit.id === item.produit.id
-                                        ? { ...prevItem, quantite: 
-                                        item.quantite + 1 }
+                                        ? { ...prevItem, quantite: item.quantite + 1 }
                                         : prevItem
                                         );
                                         return updatePanier;
