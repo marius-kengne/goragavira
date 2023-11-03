@@ -69,7 +69,6 @@
     display: flex;
     justify-content: center;
     padding-top: 100px;
-    min-height: 1000px;
     
     @media screen and (max-width: 768px) {
         display: block;
@@ -215,10 +214,14 @@ ul{
   }
   
   .carousel-containerProd{
-    width: 400px;
+    width: 350px;
   }
 
   .flex-seach{
     display: flex;
     justify-content: space-between;
+  }
+
+  .carousel-containerProd .carousel .thumbs-wrapper{
+    display: none;
   }
