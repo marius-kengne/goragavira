@@ -27,95 +27,115 @@ const Commande = () => {
 
   const handleConfirmation = async(e) => {
     //e.preventDefault();
-
+    /*
     // appel API pour le paiement
     const data = {
-        "type": "CarteBlanche",
-        "out": "payement valide"
+        "status": "OK",
+        "message": "payement valide",
+        "type": "CarteBlanche"
     }
+    */
+    const apiUrlPaiement = "http://localhost:3001/?carte="+payment.cardNumber+"&noms="+payment.cardName+"&date="+payment.expirationDate+"&crs="+payment.ccv
 
-    if (data.out && data.out == "payement valide") {
-        console.log("appel api commande woocommerce");
-        
-        const consumerKey = 'ck_e30e489bfe9990edb792ce1ad7436620dff7cb29';
-        const consumerSecret = 'cs_82c3e0ccfb784baa8052e1edfbc438aa3f3724fc';
-        
-    
-        const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wc/v3/';
-        const data = {
-            "payment_method": "bacs",
-            "payment_method_title": "Direct Bank Transfer",
-            "set_paid": true,
-            "billing": {
-              "first_name": delivery.firstName,
-              "last_name": delivery.lastName,
-              "address_1": delivery.address1,
-              "address_2": delivery.address2,
-              "city": delivery.city,
-              "state": "CA",
-              "postcode": delivery.postcode,
-              "country": delivery.country,
-              "email": "",
-              "phone": ""
-            },
-            "shipping": {
-              "first_name": delivery.firstName,
-              "last_name": delivery.lastName,
-              "address_1": delivery.address,
-              "address_2": delivery.address2,
-              "city": delivery.city,
-              "state": "CA",
-              "postcode": delivery.postcode,
-              "country": delivery.country
-            },
-            "line_items": lineItems,
-            "shipping_lines": [
-              {
-                "method_id": "flat_rate",
-                "method_title": "Flat Rate",
-                "total": totalPrice
-              }
-            ]
-        }
-
-        console.log("affichage valeur de data" +JSON.stringify(data));
-
-        console.log("affichage valeur de " +delivery);
-        console.log("affichage valeur de " +payment);
-        
-        fetch(apiUrl + 'orders', {
-        method: 'POST',
+    fetch(apiUrlPaiement, {
+        method: 'GET',
         headers: {
-            'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`),
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        //body: JSON.stringify(data)
         })
         .then(response => response.json())
         .then(result => {
-            console.log("result listing commande");
-            setCommande(result);
-            if (result.status && result.status == "pending") {
-                setSuccess("Votre commande a bien été prise en compte !!")
-                navigate('/commande')
-                resetCart();
-               
-            } else {
-                setError("La commande n'a pas pu être finalisée")
-            }
             console.log(JSON.stringify(result));
-            //console.log("affichage valeur de " +delivery);
-            //console.log("affichage valeur de " +payment);
+            if (result.status && result.status == "OK") {
+
+                console.log("appel api commande woocommerce");
+                
+                const consumerKey = 'ck_e30e489bfe9990edb792ce1ad7436620dff7cb29';
+                const consumerSecret = 'cs_82c3e0ccfb784baa8052e1edfbc438aa3f3724fc';
+                
+            
+                const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wc/v3/';
+                const data = {
+                    "payment_method": "bacs",
+                    "payment_method_title": "Direct Bank Transfer",
+                    "set_paid": true,
+                    "billing": {
+                      "first_name": delivery.firstName,
+                      "last_name": delivery.lastName,
+                      "address_1": delivery.address1,
+                      "address_2": delivery.address2,
+                      "city": delivery.city,
+                      "state": "CA",
+                      "postcode": delivery.postcode,
+                      "country": delivery.country,
+                      "email": "",
+                      "phone": ""
+                    },
+                    "shipping": {
+                      "first_name": delivery.firstName,
+                      "last_name": delivery.lastName,
+                      "address_1": delivery.address,
+                      "address_2": delivery.address2,
+                      "city": delivery.city,
+                      "state": "CA",
+                      "postcode": delivery.postcode,
+                      "country": delivery.country
+                    },
+                    "line_items": lineItems,
+                    "shipping_lines": [
+                      {
+                        "method_id": "flat_rate",
+                        "method_title": "Flat Rate",
+                        "total": totalPrice
+                      }
+                    ]
+                }
+        
+                console.log("affichage valeur de data" +JSON.stringify(data));
+        
+                console.log("affichage valeur de " +delivery);
+                console.log("affichage valeur de " +payment);
+                
+                fetch(apiUrl + 'orders', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`),
+                },
+                body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(result => {
+                    console.log("result listing commande");
+                    setCommande(result);
+                    if (result.status && result.status == "pending") {
+                        setError("")
+                        setSuccess("Votre commande a bien été prise en compte !!")
+                        navigate('/commande')
+                        resetCart();
+                        setDelivery([])
+                        setPayment([])
+                    } else {
+                        setError("La commande n'a pas pu être finalisée")
+                    }
+                    console.log(JSON.stringify(result));
+                })
+                .catch(error => {
+                    console.error('Erreur lors de la récupération des données :', error);
+                });
+                
+            } else {
+                setSuccess("")
+                setError("Echec de paiement. Vérifier vos informations de carte")
+                navigate('/commande')
+        
+            }
         })
         .catch(error => {
             console.error('Erreur lors de la récupération des données :', error);
         });
-        
-    } else {
 
-        setError("Echec de paiement. Vérifier vos informations de carte")
-        navigate('/commande')
 
-    }
     
     };
 
@@ -124,8 +144,9 @@ const Commande = () => {
         <div className="container text-center">
       <h2 className='text-center mt-4'><strong>Commande</strong></h2>
 
-      {error && <Alert variant="danger">{error}</Alert>}
-      {success && <Alert variant="success">{success}</Alert>}
+      {error && error !== "" && <Alert variant="danger">{error}</Alert>}
+
+      {success && success !== "" && <Alert variant="success">{success}</Alert>}
 
       <h3>Produits sélectionnés :</h3>
       {cartItems.length === 0 ? (
