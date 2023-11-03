@@ -28,11 +28,13 @@ const Produit = () => {
 
     return (
         <div>
-            <div className="products-cont">
+            <div className="product-cont">
                 <div className = "product">
-                    <h2>{product.name}</h2>
-                    <img className="img"src={product.images}/> 
-                    <div dangerouslySetInnerHTML={{__html: product.description}} />
+                    <div><img className="img"src={product.images}/></div>
+                    <div className='details-cont'>
+                        <h2>{product.name}</h2>
+                        <div class="htmlDetailText" dangerouslySetInnerHTML={{__html: product.description}} />
+                    </div>
                 </div>
             </div>
         </div>

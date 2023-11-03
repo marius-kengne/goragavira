@@ -30,7 +30,7 @@ const Login = () => {
 
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`), },
             body: JSON.stringify(apiParams)
         };
         /*
@@ -67,7 +67,12 @@ const Login = () => {
             if (data.hasOwnProperty('token')) {
                 setToken(data.token);
                 sessionStorage.setItem('tokenUser', data.token)
-                navigate('/accueil')
+                if (sessionStorage.getItem('isCommande') && sessionStorage.getItem('isCommande') === 'true') {
+                    navigate('/commande')
+                } else {
+                    navigate('/accueil')
+                }
+                
             } else if(data.hasOwnProperty('code')) {
                 const code = data.code
                 if (code.includes("invalid_username")) {

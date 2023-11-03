@@ -42,15 +42,15 @@ const ListProduit = () => {
 
     return (
         <div>
-            <div className="filter-cont"></div>
+         {/* <div className="filter-cont"></div> */}
             <div className="products-cont">
                 <div className = "products">
                     {products.map((product) => (
-                        <div className='' key={product.id}>
+                        <div className='prod' key={product.id}>
                             <Link to={`/product/${product.id}`}>
-                                <h2>{product.name}</h2>
-                                <p>{product.slug}</p>
-                                <img className="img"src={product.images[0].src}/>
+                                <img className="img"src={product.images[2].src}/>
+                                <div className="title">{product.name}</div>
+                                <div className="price">  {product.price} €</div>
                                 {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
                             </Link>
                             <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button>

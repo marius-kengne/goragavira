@@ -311,12 +311,12 @@ body {
 .checkout-section {
     float: right;
     /*margin: 0;*/
-    margin-right: 500px;
-    margin-left: 500px;
 }
  
 .checkout-section .checkout-button {
     background-color: #323754;
+    margin-bottom: 50px;
+    float: right;
 }
  
 .checkout-section .checkout-button:hover {

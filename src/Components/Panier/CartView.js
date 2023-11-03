@@ -3,7 +3,7 @@ import { CartContext } from './CartContext';
 import Main from '../Home/Main';
 import './Panier.css';
 import { useNavigate } from 'react-router-dom';
-
+import { Container, Row, Col, Button } from 'react-bootstrap';
 const CartView = () => {
 
   const navigate = useNavigate()
@@ -13,6 +13,11 @@ const CartView = () => {
   console.log(cartItems);
   const tokenUser = sessionStorage.getItem('tokenUser') 
 
+  let totalPrice = 0;
+  if (cartItems && cartItems.length > 0) {
+    totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
+  }
+
   const handleCommander = async(e) => {
         //e.preventDefault();
     
@@ -21,6 +26,7 @@ const CartView = () => {
             navigate('/commande')
             
         } else {
+            sessionStorage.setItem('isCommande', 'true')
             navigate('/login')
         }
 
@@ -43,70 +49,40 @@ const CartView = () => {
                             <img src={item.images[1].src} alt={item.slug} />
                             </div>
                             <div className="item-details">
-                            <h3>{item.nom}</h3>
-                            <p>Prix: {item.slug} €</p>
+                            <h3>{item.name}</h3>
+                            <p>Prix: {item.price} €</p>
                             </div>
                         </div>
                         <div>
                             <div className="item-actions">
                             <button className="remove-button">
-                                Supptimer le produit
+                                Supprimer le produit
                             </button>
-                            <div className="quantite">
-                                <button style={{ margin: "1%" }} onClick={(e) => {
-                                    /*
-                                    setPanierProduits((prevPanierProduits) => {
-                                    const updatePanier = prevPanierProduits.map(
-                                        (prevItem) =>
-                                        prevItem.produit.id === item.produit.id
-                                        ? { ...prevItem, quantite: 
-                                        item.quantite + 1 }
-                                        : prevItem
-                                        );
-                                        return updatePanier;
-                                    })*/
-                                }}
-                                >
-                                +
-                                </button>
-                                <p className='quant'>{item.quantite} </p>
-                                <button onClick={(e) => {
-                                    /*
-                                setPanierProduits((prevPanierProduits) => {
-                                    const updatePanier = prevPanierProduits.map(
-                                    (prevItem) => prevItem.produit.id === item.produit.id
-                                    ? { ...prevItem, quantite:
-                                    Math.max(item.quantite - 1, 0) }
-                                    : prevItem
-                                    );
-                                    return updatePanier;
-                                })*/
-                                }}
-                                >
-                                -
-                                </button>
-                            </div>
+                            
                             </div>
                         </div>
                         </div>
                     </li>
                     ))}
                 </ul>
-                    <div className="checkout-section">
-                    <div className="checkout-total">
-                        <p className="total">Montant Total: 
-                                {} €
-                        </p>
-                    </div>
-                    <center>
-                    <button onClick={() => handleCommander(cartItems)}
+                <Container>
+                    <Row className="justify-content-center">
+                        <Col xs={12} md={6} className="checkout-section text-center">
+                        <div className="checkout-total">
+                            <p className="total">
+                            Montant total : <strong>{totalPrice} €</strong>
+                            </p>
+                        </div>
+                        <Button
+                            onClick={() => handleCommander(cartItems)}
                             className="checkout-button"
                             disabled={false}
-                    >
-                        Commander
-                    </button>
-                    </center>
-                    </div>
+                        >
+                            Commander
+                        </Button>
+                        </Col>
+                    </Row>
+                    </Container>
                 </div>
             )}
             </div>
