@@ -125,7 +125,7 @@ const Login = () => {
                 Se connecter
                 </Button> */}
                 <div className='text-center mt-4'>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" style = {{background:"black"}}>
                         Se connecter
                     </Button>
                 </div>

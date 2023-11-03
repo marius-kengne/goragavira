@@ -43,11 +43,13 @@
         padding: 5px 0px;
         display: flex;
         justify-content: space-between;
+
     }
 
     .price{
         font-size: 12px;
         font-weight: bold
+
     }
 
 }
@@ -61,6 +63,7 @@
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    min-height: 1000px;
     
     @media screen and (max-width: 768px) {
         display: block;
@@ -99,22 +102,44 @@ ul{
 
 .add-cont{
     display: flex;
-
     .add-but{
-        background: black;
+        background: rgb(79, 79, 79);
         border-radius: 3px;
+        font-weight: 200;
         color: white;
-        padding: 5px;
+        padding: 10px;
         margin-left: 5px;
+        size: 18px;
+
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+            display: flex;
+
+        }
     }
 }
 .cont-description{
     padding: 20px 50px;
-
+    font-family: Georgia, serif;
+    min-width: 620px;
     .title{
         margin-bottom:20px;
-    }
+        font-size: 20px;
+        font-weight: bold;
+        list-style-type: none;
+        padding: 5px 0px;
+       color: black;
+        .categorie{
+            font-size: 15x;
+            font-weight: 100;
 
+        }
+    }
+  .price{
+        font-size: 20px;
+        font-weight: bold
+        
+    }
     .size-cont{
         margin: 30px 0px;
     }
@@ -147,3 +172,46 @@ ul{
     }
   
   }
+
+  .carousel-container{
+    width: 400px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: 0 auto; /* Centrer horizontalement */
+  }
+  
+  .search input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    font-family: Georgia, serif;
+
+  }
+  
+  .search button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Georgia, serif;
+
+  }
+  
+  /* Au survol du bouton */
+  .search button:hover {
+    background-color: #828282;
+  }
+  

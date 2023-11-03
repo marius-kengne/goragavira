@@ -6,8 +6,6 @@ import image2 from '../../Assets/homeimg2.png';
 import image3 from '../../Assets/homeimg3.png';
 import './Home.css';
 
-
-
 const Main = () => {
 
     const [posts, setPosts] = useState([]);

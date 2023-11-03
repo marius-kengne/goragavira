@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../Panier/CartContext';
 import { Form, Button, Card, Container, Row, Col, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './Commande.css'
 
 const Commande = () => {
 
@@ -259,7 +260,7 @@ const Commande = () => {
 
     <Row className="justify-content-center mt-4">
         <Col xs={12} md={6}>
-        <Button variant="primary" className="w-100" onClick={() => handleConfirmation(cartItems)}>
+        <Button variant="primary" className="w-100" style = {{background:"black"}} onClick={() => handleConfirmation(cartItems)}>
             CONFIRMER LA COMMANDE
         </Button>
         </Col>

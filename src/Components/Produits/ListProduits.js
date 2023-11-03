@@ -82,7 +82,11 @@ const ListProduit = () => {
                                 <div>
                                     <Link to={`/product/${product.id}`}>{product.name}</Link>
                                 </div>                            
-                                <div onClick={() => addToCart(product)}>
+                                <div onClick={() => {
+                                    addToCart(product)
+                                    window.alert("Ajoutez!");
+                                }}>
+
                                     <FaShoppingCart size={18} />
                                 </div>
                             </div>

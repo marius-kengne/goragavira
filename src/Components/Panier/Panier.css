@@ -65,6 +65,7 @@ body {
 }
  
 .produit {
+    font-family: Georgia, serif;
     background-color: rgb(255, 245, 245);
     border: 1px solid #1b4e1f;
     border-radius: 10%;
@@ -82,6 +83,7 @@ body {
 }
  
 .produit img {
+    font-family: Georgia, serif;
     max-width: 150px;
     /* Increased image size */
     height: auto;
@@ -115,6 +117,7 @@ body {
 /* Cart Checkout */
 .cart {
     flex: 1;
+    font-family: Georgia, serif;
     min-width: 300px;
     margin-top: 3%;
     background-color: #fff9e6;
@@ -146,6 +149,7 @@ body {
  
 .panier-item {
     display: inline-flex;
+    font-family: Georgia, serif;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -161,6 +165,7 @@ body {
  
 .panier-item .item-image img {
     max-width: 90px;
+    font-family: Georgia, serif;
     height: auto;
     margin-right: 20px;
     border-radius: 50%;
@@ -178,6 +183,7 @@ body {
 }
  
 .panier-item h3 {
+    font-family: Georgia, serif;
     display: inline;
     font-size: 1.4rem;
     margin: 0;
@@ -198,6 +204,7 @@ body {
  
 .panier-item .item-actions button {
     background-color: #000000;
+    font-family: Georgia, serif;
     border: none;
     color: white;
     padding: 8px 15px;
@@ -214,6 +221,7 @@ body {
 }
  
 .panier-item .quantite {
+    font-family: Georgia, serif;
     display: flex;
     flex-direction: row;
     margin-left: 15px;
@@ -222,6 +230,7 @@ body {
 }
  
 .panier .total {
+    font-family: Georgia, serif;
     font-size: 1.4rem;
     margin: 20px 0;
     text-align: right;
@@ -229,6 +238,7 @@ body {
 }
  
 .panier .checkout-button {
+    font-family: Georgia, serif;
     background-color: #6cc24a;
     border: none;
     color: white;

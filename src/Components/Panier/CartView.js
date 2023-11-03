@@ -37,7 +37,7 @@ const CartView = () => {
 
     return (
  
-        <div className={"panier"} style={{ maxHeight: '500px', overflowY: auto, marginBottom: '10px', display:'-ms-grid'}}>
+        <div className={"panier"} style={{overflowY: auto, marginBottom: '10px', display:'-ms-grid'}}>
             <h2>Mon Panier</h2>
             {cartItems.length === 0 ? (
             <p className="panierVide">Votre panier est vide.</p>
