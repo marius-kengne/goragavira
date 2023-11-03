@@ -22,18 +22,18 @@ const Navigation = () => {
            <Nav>
                 <Bars />
                 <NavMenu>
-                    <NavLink to="/accueil" activestyle="true"> <span className='txt'>Accueil</span> <FaHome /></NavLink>
-                    <NavLink to="/produits" activestyle="true"><span className='txt'>Produits</span> <FaShoppingBag /></NavLink>
+                    <NavLink to="/accueil" activestyle="true"> <span className='txt'>Accueil</span> <FaHome style= {{color :'white'}}/></NavLink>
+                    <NavLink to="/produits" activestyle="true"><span className='txt'>Produits</span> <FaShoppingBag style= {{color :'white'}}/></NavLink>
                     {/* <NavLink to="/" activestyle="true">Page 2</NavLink> */}
                     {/* <NavLink to="/login" activestyle>Connexion</NavLink>  */}
                 </NavMenu>
                 <img className="logo"src={logo}/>
                 <NavBtn>
                     <NavLink to="/login">
-                    <span className='txt'> Mon compte </span> <FaUser />
+                    <span className='txt'> Mon compte </span> <FaUser style= {{color :'white'}}/>
                     </NavLink>
                     <NavLink to="/panier" element={<CartView />}>
-                    <span className='txt'>Panier</span><FaShoppingCart/>
+                    <span className='txt'>Panier</span><FaShoppingCart style= {{color :'white'}}/>
                     </NavLink>
                 </NavBtn>
             </Nav>

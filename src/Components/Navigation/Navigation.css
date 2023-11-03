@@ -54,3 +54,8 @@ a:-webkit-any-link{
         color: rgb(55, 52, 52);
     }
 }
+
+.txt{
+    color: white;
+    margin-right: 5px;
+}

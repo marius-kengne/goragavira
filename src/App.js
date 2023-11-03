@@ -9,6 +9,7 @@ import ListProduits from './Components/Produits/ListProduits';
 import { CartProvider } from './Components/Panier/CartContext';
 import CartView from './Components/Panier/CartView';
 import Footer from './Components/Layout/Footer/Footer';
+import Commande from './Components/Commande/Commande';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/product/:id" Component={Produit} />
           <Route />
           <Route path="/panier" element={<CartView />} />
-
+          <Route path="/commande" element={<Commande />} />
         </Routes>
         <Footer />
       </div>
