@@ -77,22 +77,22 @@ const Footer = () => {
 
               <ul className='list-unstyled mb-0'>
                 <li>
-                  <a href='https://www.bleu-bonheur.fr/femme/categories/vetements/gilets.html' className='text-white'>
+                  <a className='text-white'>
                     Gilets
                   </a>
                 </li>
                 <li>
-                  <a href='https://www.bleu-bonheur.fr/femme/categories/vetements/parkas-et-manteaux-et-impermeables.html' className='text-white'>
+                  <a  className='text-white'>
                     Parkas et Maneaux
                   </a>
                 </li>
                 <li>
-                  <a href='https://www.bleu-bonheur.fr/femme/categories/vetements/chemisiers-et-blouses.html' className='text-white'>
+                  <a  className='text-white'>
                     Chemises et Blouses
                   </a>
                 </li>
                 <li>
-                  <a href='https://www.bleu-bonheur.fr/femme/categories/vetements/robes.html' className='text-white'>
+                  <a className='text-white'>
                     Robes
                   </a>
                 </li>

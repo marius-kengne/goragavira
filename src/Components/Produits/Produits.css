@@ -18,6 +18,9 @@
     height: 450px;
 }
 
+.return{
+    margin: 0px 50px;
+}
 .products{
     padding: 20px;
     display: flex;
@@ -54,6 +57,9 @@
 
 }
 
+.link-return{
+
+}
 .details-cont{
     padding: 10px;
 }
@@ -201,7 +207,6 @@ ul{
     cursor: pointer;
     font-size: 16px;
     font-family: Georgia, serif;
-
   }
   
   /* Au survol du bouton */
@@ -211,4 +216,9 @@ ul{
   
   .carousel-containerProd{
     width: 400px;
+  }
+
+  .flex-seach{
+    display: flex;
+    justify-content: space-between;
   }

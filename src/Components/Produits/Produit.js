@@ -5,6 +5,9 @@ import { FiChevronDown } from 'react-icons/fi';
 import { FiChevronUp } from 'react-icons/fi';
 import { CartContext } from '../Panier/CartContext';
 import { Carousel } from 'react-responsive-carousel';
+import { FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 const Produit = ({ }) => {
   const i = 1;
@@ -50,7 +53,9 @@ const Produit = ({ }) => {
 
   return (
     <div className="product-description">
-
+      <div className='return'>
+          <Link className='link-return' to="/produits"><FaArrowLeft/></Link>
+      </div>
       <div className="carousel-containerProd">
         <Carousel showThumbs={true} infiniteLoop autoPlay>
         

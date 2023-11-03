@@ -3,7 +3,7 @@ import './Produits.css';
 import { Link } from 'react-router-dom';
 import '../Produits/Produits.css';
 import { CartContext } from '../Panier/CartContext';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
 
 const ListProduit = () => {
 
@@ -62,15 +62,16 @@ const ListProduit = () => {
 
     return (
         <div className='listProduits'>
-            <div className="search">
-                <input
-                    type="text"
-                    placeholder="Rechercher par catégorie"
-                    value={searchCategory}
-                    onChange={(e) => setSearchCategory(e.target.value)}
-                />
-                <button onClick={handleSearch}>Rechercher</button>
-            </div>
+                <div className="search">
+                    <input
+                        type="text"
+                        placeholder="Rechercher par catégorie"
+                        value={searchCategory}
+                        onChange={(e) => setSearchCategory(e.target.value)}
+                    />
+                    <button onClick={handleSearch}>Rechercher</button>
+                </div>
+            
             <div className="products-cont">
                 <div className = "products">
                     {products.map((product) => (
