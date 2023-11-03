@@ -11,7 +11,6 @@ const CartView = () => {
   console.log(cartItems);
 
     return (
- 
         <div className={"panier"}>
             <h2>Mon Panier</h2>
             {cartItems.length === 0 ? (
@@ -93,11 +92,7 @@ const CartView = () => {
                     </div>
                 </div>
             )}
-            </div>
-       
-
-
-        
+            </div>   
     );
 
 };

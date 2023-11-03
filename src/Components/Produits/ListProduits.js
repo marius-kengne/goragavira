@@ -3,20 +3,11 @@ import './Produits.css';
 import { Link } from 'react-router-dom';
 import '../Produits/Produits.css';
 import { CartContext } from '../Panier/CartContext';
+import { FaShoppingCart } from 'react-icons/fa';
 
-const ListProduit = () => {
+const ListProduit = ({ }) => {
 
     const { addToCart } = useContext(CartContext);
-    // useEffect(() => {
-    //     axios.get('https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/product')
-    //       .then((response) => {
-    //         setProducts(response.data);
-    //       })
-    //       .catch((error) => {
-    //         console.error('Erreur lors de la récupération des données :', error);
-    //       });
-    //   }, []);
-
 
     const consumerKey = 'ck_e30e489bfe9990edb792ce1ad7436620dff7cb29';
     const consumerSecret = 'cs_82c3e0ccfb784baa8052e1edfbc438aa3f3724fc';
@@ -41,7 +32,7 @@ const ListProduit = () => {
 
 
     return (
-        <div>
+        <div className='listProduits'>
          {/* <div className="filter-cont"></div> */}
             <div className="products-cont">
                 <div className = "products">
@@ -49,11 +40,13 @@ const ListProduit = () => {
                         <div className='prod' key={product.id}>
                             <Link to={`/product/${product.id}`}>
                                 <img className="img"src={product.images[2].src}/>
-                                <div className="title">{product.name}</div>
+                                <div className="title">
+                                    <div>{product.name} </div>                            
+                                    <div onClick={() => addToCart(product)}><FaShoppingCart size={18} /></div>
+                                </div>
                                 <div className="price">  {product.price} €</div>
                                 {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
                             </Link>
-                            <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button>
                         </div>
                     ))}
                 </div>

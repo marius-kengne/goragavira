@@ -1,4 +1,12 @@
 import React , {useState, useEffect} from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import image1 from '../../Assets/homeimg1.png';
+import image2 from '../../Assets/homeimg2.png';
+import image3 from '../../Assets/homeimg3.png';
+import './Home.css';
+
+
 
 const Main = () => {
 
@@ -26,22 +34,33 @@ const Main = () => {
     }, []);
 
     return (
-    <div>
+    <div className='main'>
         <h2>WordPress Home Page</h2>
         <div>
-        <div dangerouslySetInnerHTML={{ __html: posts }} />
+            <div dangerouslySetInnerHTML={{ __html: posts }} />
+        </div>
         
+        <div className="carousel-container">
+        <Carousel showThumbs={true} infiniteLoop autoPlay>
+        
+        <div>
+            <img className='homeImage' src={image2} alt="Image 2" />
+        </div>
+        <div>
+            <img className='homeImage' src={image3} alt="Image 3" />
+        </div>
+        <div>
+            <img className='homeImage' src={image1} alt="Image 1" />
+        </div>
+        
+        </Carousel>
         </div>
     </div>
-    );
 
-    /*
-    return (
-        <div>
-            Bienvenu sur la page d'accueil
-        </div>
+
+
+
     );
-    */
 };
 
 export default Main;
