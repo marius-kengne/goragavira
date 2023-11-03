@@ -85,7 +85,7 @@ const ListProduit = () => {
                                 </div>                            
                                 <div onClick={() => {
                                     addToCart(product)
-                                    window.alert("Ajoutez!");
+                                    window.alert("Produit ajouté avec success !");
                                 }}>
 
                                     <FaShoppingCart size={18} />
