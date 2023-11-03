@@ -2,3 +2,16 @@
   font-size: 11px; /* Exemple de taille de police */
   font-family: Arial, sans-serif; /* Exemple de police */
 }
+
+.forMobile{
+    
+  @media screen and (max-width: 768px) {
+    display: none;
+}
+}
+
+.padding-cont{
+  padding: 10px;
+
+  padding-top:2px;
+}

@@ -4,8 +4,9 @@
 }
 
 .listProduits{
-padding-top: 100px;
+    padding-top: 100px;
 }
+
 .product-cont{
     height: 100%;
     width: 100%;
@@ -22,6 +23,7 @@ padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 1000px;
 }
 
 .product{
@@ -60,6 +62,9 @@ padding-top: 100px;
     justify-content: center;
     padding-top: 100px;
     
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 a:-webkit-any-link{

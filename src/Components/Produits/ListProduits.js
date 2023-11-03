@@ -39,14 +39,15 @@ const ListProduit = ({ }) => {
                     {products.map((product) => (
                         <div className='prod' key={product.id}>
                             <Link to={`/product/${product.id}`}>
-                                <img className="img"src={product.images[2].src}/>
+                                <img className="img"src={product.images[2].src}/></Link>
                                 <div className="title">
-                                    <div>{product.name} </div>                            
+                                   <div><Link to={`/product/${product.id}`}>  {product.name}  </Link></div>                            
                                     <div onClick={() => addToCart(product)}><FaShoppingCart size={18} /></div>
                                 </div>
-                                <div className="price">  {product.price} €</div>
-                                {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
-                            </Link>
+                           
+                            <div className="price">  {product.price} €</div>
+                            {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
+                            
                         </div>
                     ))}
                 </div>

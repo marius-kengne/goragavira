@@ -68,6 +68,8 @@ const Login = () => {
             if (data.hasOwnProperty('token')) {
                 setToken(data.token);
                 sessionStorage.setItem('tokenUser', data.token)
+                sessionStorage.setItem('userName', data.user_nicename)
+
                 if (sessionStorage.getItem('isCommande') && sessionStorage.getItem('isCommande') === 'true') {
                     navigate('/commande')
                 } else {

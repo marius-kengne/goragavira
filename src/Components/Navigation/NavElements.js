@@ -14,8 +14,9 @@ export const Nav = styled.nav
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
-	padding: 0.2rem calc((100vw - 1000px) / 2);
+	padding: 0.2rem calc((100vw - 1250px) / 2);
 	z-index: 12;
+	
 	@media screen and (max-width: 768px) {
 		display: none;
 	}

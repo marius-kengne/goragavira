@@ -7,31 +7,31 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const Footer = () => {
   return (
     <MDBFooter className='text-center footer-text' color='white' bgColor='dark'>
-      <MDBContainer className='p-4'>
+      <MDBContainer className='padding-cont'>
         {/* <section className='mb-3 d-flex justify-content-center justify-content-lg-between p-3 border-bottom'> */}
-        <section className='mb-3 d-flex justify-content-center p-3 border-bottom' >
+        <section className=' '>
           <div className='me-5 mt-4 justify-content-lg-between'>
             <span>Visitez nos reseaux sociaux.</span>
           </div>
           <MDBBtn outline color="light" className='m-3' href='https://www.facebook.com/'>
-            <MDBIcon fab icon='facebook-f' /> 
+            <MDBIcon fab icon='facebook-f' color="light" /> 
           </MDBBtn>
 
           <MDBBtn outline color="light" className='m-3' href='https://www.instagram.com/'>
-            <MDBIcon fab icon='instagram' />
+            <MDBIcon fab icon='instagram' color="light"/>
           </MDBBtn>
 
           <MDBBtn outline color="light" className='m-3' href='https://twitter.com/?lang=fr' >
-            <MDBIcon fab icon='twitter' />
+            <MDBIcon fab icon='twitter' color="light"/>
           </MDBBtn>
 
 
           <MDBBtn outline color="light" className='m-3' href='https://www.linkedin.com/'>
-            <MDBIcon fab icon='linkedin-in' />
+            <MDBIcon fab icon='linkedin-in' color="light" />
           </MDBBtn>
 
           <MDBBtn outline color="light" className='m-3' href='https://www.youtube.com/'>
-            <MDBIcon fab icon='youtube' />
+            <MDBIcon fab icon='youtube' color="light"/>
           </MDBBtn>
 
 
@@ -59,7 +59,7 @@ const Footer = () => {
           </form>
         </section> */}
 
-        <section className=''>
+        <section className='forMobile'>
           <MDBRow>
             <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
               <h5 className='text-uppercase'>Groupe5-Woocommerce</h5>

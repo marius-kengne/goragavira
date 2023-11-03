@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {useParams} from 'react-router-dom';
 import Collapsible from 'react-collapsible';
 import { FiChevronDown } from 'react-icons/fi';
 import { FiChevronUp } from 'react-icons/fi';
-
-
-
+import { CartContext } from '../Panier/CartContext';
 
 const Produit = () => {
     const i = 1;
@@ -14,7 +12,8 @@ const Produit = () => {
     const consumerSecret = 'cs_82c3e0ccfb784baa8052e1edfbc438aa3f3724fc';
     const [product, setProduct] = useState([]);
     const [selectedSize, setSelectedSize] = useState();
-    const [quantite, setQuantite] = useState(0);
+    const { cartItems, setCartItems, removeFromCart, addToCart} = useContext(CartContext);
+
 
     const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wc/v3/products/';
 
@@ -36,16 +35,6 @@ const Produit = () => {
     const handleSizeChange = (e) => {
         setSelectedSize(e.target.value);
     };
-
-    const incrementQuantite = () => {
-        setQuantite(quantite + 1);
-      };
-    
-      const decrementQuantite = () => {
-        if (quantite > 0) {
-          setQuantite(quantite - 1);
-        }
-      };
     
       const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -68,12 +57,7 @@ const Produit = () => {
                 </select>
             </div>
             <div className='add-cont'>
-                <div className="quatite">
-                    <button className ="button" onClick={decrementQuantite}>-</button>                
-                    <div class="number">{quantite}</div>
-                    <button className ="button" onClick={incrementQuantite}>+</button>
-                </div>
-                <div className='add-but'>Ajouter au panier</div>
+                <button className='add-but' onClick={() => addToCart(product)}>Ajouter au panier</button>
             </div>
             <div>
             <div className="htmlDetailText" onClick={toggleDropdown}>
@@ -86,7 +70,7 @@ const Produit = () => {
             </div>
                 </div>
                 
-            </div>
+    </div>
   );
 
 };

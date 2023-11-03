@@ -197,19 +197,20 @@ body {
 }
  
 .panier-item .item-actions button {
-    background-color: #6cc24a;
+    background-color: #000000;
     border: none;
     color: white;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     font-size: 1rem;
+    margin-top: 20px;
  
 }
  
 .panier-item .item-actions button:hover {
-    background-color: #449e30;
+    background-color: #434343;
 }
  
 .panier-item .quantite {
@@ -326,6 +327,7 @@ body {
     background-color: #323754;
     margin-bottom: 50px;
     float: right;
+    border-radius: 10px;
 }
  
 .checkout-section .checkout-button:hover {

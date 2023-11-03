@@ -120,8 +120,9 @@ const Commande = () => {
     };
 
   return (
-    <div className="container mb-6">
-        <div className="container text-center">
+    <div className="container mb-6 ">
+
+    <div className="container text-center pt-5">
       <h2 className='text-center mt-4'><strong>Commande</strong></h2>
 
       {error && <Alert variant="danger">{error}</Alert>}
@@ -141,7 +142,7 @@ const Commande = () => {
       )}
 
       <h3>Prix total : <strong>{totalPrice} €</strong></h3>
-      </div>
+    </div>
       
 
 

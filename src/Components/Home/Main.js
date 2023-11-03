@@ -35,10 +35,12 @@ const Main = () => {
 
     return (
     <div className='main'>
-        <h2>WordPress Home Page</h2>
-        <div>
+        <div className='bienvenue'>Bienvenue !</div>
+        {/* <div>
             <div dangerouslySetInnerHTML={{ __html: posts }} />
-        </div>
+        </div> */}
+        <div className='texthome'>Découvrez l'élégance à chaque pas avec nos magnifiques robes pour toutes les occasions. Notre collection variée vous offre un large éventail de styles, de coupes et de couleurs pour répondre à toutes vos envies. Que ce soit pour une soirée spéciale, une sortie décontractée ou un événement formel, nous avons la robe parfaite pour chaque moment de votre vie.</div>
+
         
         <div className="carousel-container">
         <Carousel showThumbs={true} infiniteLoop autoPlay>
@@ -53,8 +55,12 @@ const Main = () => {
             <img className='homeImage' src={image1} alt="Image 1" />
         </div>
         
-        </Carousel>
+        </Carousel>        
+        
+
         </div>
+
+
     </div>
 
 
