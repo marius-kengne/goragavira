@@ -1,15 +1,13 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes , Navigate} from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
 import Home from './Components/Home/Home';
 import Produit from './Components/Produits/Produit';
 import Login from './Components/Login/Login';
 import ListProduits from './Components/Produits/ListProduits';
 
-import { CartContext, CartProvider } from './Components/Panier/CartContext';
+import { CartProvider } from './Components/Panier/CartContext';
 import CartView from './Components/Panier/CartView';
-import ProductList from './Components/Panier/ProductList';
-import MainProducts from './Components/Panier/MainProducts';
 import Footer from './Components/Layout/Footer/Footer';
 
 function App() {

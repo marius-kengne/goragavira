@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
     //let history = useHistory();
@@ -60,14 +61,9 @@ const Login = () => {
     };
 
     return (
-        // <Container>
-        <Container className='mt-5'>
-        {/* <Row className="justify-content-md-center"> */}
-        <Row className="justify-content-center">
-            {/* <Col xs={6}> */}
-            <Col md={6}>
-            {/* <h2 className='text-center mt-4'>Connexion</h2> */}
-            <h2 className='mt-4 text-center'>Connexion</h2>
+        <Container>
+        <Row className="connexion">
+            <h2 className='text-center mt-4'>Connexion</h2>
 
             {error && <Alert variant="danger">{error}</Alert>}
 
@@ -92,18 +88,16 @@ const Login = () => {
                 />
                 </Form.Group>
 
-                {/* <Button className='mt-4' variant="primary" type="submit">
+                <Button className='connect-but' variant="primary" type="submit">
                 Se connecter
-                </Button> */}
+                </Button>
                 <div className='text-center mt-4'>
                     <Button variant="primary" type="submit">
                         Se connecter
                     </Button>
                 </div>
             </Form>
-            </Col>
-        </Row> 
-        <hr className='my-5'></hr>
+        </Row>
         </Container>
        
     );

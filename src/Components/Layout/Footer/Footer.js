@@ -37,7 +37,7 @@ const Footer = () => {
 
         </section>
 
-        <section className=''>
+        {/* <section className=''>
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>
               <MDBCol size="auto">
@@ -57,7 +57,7 @@ const Footer = () => {
               </MDBCol>
             </MDBRow>
           </form>
-        </section>
+        </section> */}
 
         <section className=''>
           <MDBRow>

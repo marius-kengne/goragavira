@@ -1,0 +1,27 @@
+.connexion{
+    padding: 80px 50px;
+}
+
+.connect-but{
+    font-family: Georgia, serif	;
+    float: left;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background-color: rgb(55, 52, 52);
+    }
+  
+  }
