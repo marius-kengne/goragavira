@@ -170,11 +170,6 @@ ul{
         transition: all 0.2s ease-in-out;
         background-color: rgb(55, 52, 52);
     }
-  
-  }
-
-  .carousel-container{
-    width: 400px;
   }
 
   .search {
@@ -194,7 +189,6 @@ ul{
     font-size: 16px;
     outline: none;
     font-family: Georgia, serif;
-
   }
   
   .search button {
@@ -215,3 +209,6 @@ ul{
     background-color: #828282;
   }
   
+  .carousel-containerProd{
+    width: 400px;
+  }

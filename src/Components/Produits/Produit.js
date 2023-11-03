@@ -51,7 +51,7 @@ const Produit = ({ }) => {
   return (
     <div className="product-description">
 
-      <div className="carousel-container">
+      <div className="carousel-containerProd">
         <Carousel showThumbs={true} infiniteLoop autoPlay>
         
         <div>

@@ -44,10 +44,10 @@ const Main = () => {
         <Carousel showThumbs={true} infiniteLoop autoPlay>
         
         <div>
-            <img className='homeImage' src={image2} alt="Image 2" />
-        </div>
-        <div>
             <img className='homeImage' src={image3} alt="Image 3" />
+        </div> 
+        <div>
+            <img className='homeImage' src={image2} alt="Image 2" />
         </div>
         <div>
             <img className='homeImage' src={image1} alt="Image 1" />
