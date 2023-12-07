@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
@@ -126,12 +127,14 @@ const Login = () => {
 
                 {/* <Button className='connect-but' variant="primary" type="submit">
                 Se connecter
+
                 </Button> */}
                 <div className='text-center mt-4 mb-4'>
                     <Button variant="primary" type="submit" style = {{background:"black"}}>
                         Se connecter
                     </Button>
                 </div>
+
             </Form>
 
             </Col>
