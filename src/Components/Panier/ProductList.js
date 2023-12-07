@@ -2,11 +2,27 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import '../Produits/Produits.css';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 //const ProductList = ({ products }) =>
 const ProductList = ({  }) => {
 
     
   const { addToCart } = useContext(CartContext);
+
+  const addToCartWithNotification = (product) => {
+    addToCart(product); // Ajoutez le produit au panier
+    toast.success('Produit ajouté au panier', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   /*
   const [cartItems, setCartItems] = useState([]);
@@ -50,7 +66,8 @@ const ProductList = ({  }) => {
                             <h2>{product.name}</h2>
                             <p>{product.slug}</p>
                             <img className="img" src={product.images[2].src}/>
-                            <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button>
+                            {/* <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button> */}
+                            <button className='btn btn-primary' onClick={() => addToCartWithNotification(product)}>Ajouter au panier</button>
                         </div>
                     ))}
                 </div>

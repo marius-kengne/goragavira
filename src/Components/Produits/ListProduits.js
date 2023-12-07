@@ -1,59 +1,100 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Produits.css';
 import { Link } from 'react-router-dom';
 import '../Produits/Produits.css';
 import { CartContext } from '../Panier/CartContext';
+import { FaShoppingCart, FaArrowLeft, FaSearch } from 'react-icons/fa';
 
 const ListProduit = () => {
 
     const { addToCart } = useContext(CartContext);
-    // useEffect(() => {
-    //     axios.get('https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wp/v2/product')
-    //       .then((response) => {
-    //         setProducts(response.data);
-    //       })
-    //       .catch((error) => {
-    //         console.error('Erreur lors de la récupération des données :', error);
-    //       });
-    //   }, []);
-
 
     const consumerKey = 'ck_e30e489bfe9990edb792ce1ad7436620dff7cb29';
     const consumerSecret = 'cs_82c3e0ccfb784baa8052e1edfbc438aa3f3724fc';
     const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState();
+    const [searchCategory, setSearchCategory] = useState([]);
 
     const apiUrl = 'https://eisee-it.o3creative.fr/2023/groupe5/wp-json/wc/v3/';
 
-    fetch(apiUrl + 'products', {
-    method: 'GET',
-    headers: {
-        'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`),
-    },
-    })
-    .then(response => response.json())
-    .then(data => {
-        setProducts(data);
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Erreur lors de la récupération des données :', error);
-    });
+    useEffect(() => {
+        let url = apiUrl + 'products';
 
+        if (searchCategory != '') {
+            if(searchCategory == "Volcanique"){
+                url += `?category=25`;
+            }else if(searchCategory == "Compostelle"){
+                url += `?category=22`;
+            }else if(searchCategory === "Dos Nu"){
+                url += `?category=23`;
+            }else if(searchCategory === "Cubisme"){
+                url += `?category=24`;
+            } else if(searchCategory === "Compostelle"){
+                url += `?category=22`;
+            } if(searchCategory === "Volcanique"){
+                url += `?category=25`;
+            } if(searchCategory === "Damier"){
+                url += `?category=27`;
+            }
+            else{
+                url += `?category=${searchCategory}`;
+            }
+            
+        }
+
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Basic ' + btoa(`${consumerKey}:${consumerSecret}`),
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            setProducts(data);
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Erreur lors de la récupération des données :', error);
+        });
+    }, [searchCategory]);
+
+    const handleSearch = () => {
+        
+        setCategory(searchCategory);
+    };
 
     return (
-        <div>
-         {/* <div className="filter-cont"></div> */}
+        <div className='listProduits'>
+                <div className="search">
+                    <input
+                        type="text"
+                        placeholder="Rechercher par catégorie"
+                        value={searchCategory}
+                        onChange={(e) => setSearchCategory(e.target.value)}
+                    />
+                    <button onClick={handleSearch}><FaSearch/></button>
+                </div>
+            
             <div className="products-cont">
                 <div className = "products">
                     {products.map((product) => (
                         <div className='prod' key={product.id}>
                             <Link to={`/product/${product.id}`}>
-                                <img className="img"src={product.images[2].src}/>
-                                <div className="title">{product.name}</div>
-                                <div className="price">  {product.price} €</div>
-                                {/* <div dangerouslySetInnerHTML={{__html: product.description}} /> */}
+                                <img className="img" src={product.images[0].src} alt={product.name} />
                             </Link>
-                            <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au panier</button>
+                            <div className="title">
+                                <div>
+                                    <Link to={`/product/${product.id}`}>{product.name}</Link>
+                                </div>                            
+                                <div onClick={() => {
+                                    addToCart(product)
+                                    window.alert("Produit ajouté avec success !");
+                                }}>
+
+                                    <FaShoppingCart size={18} />
+                                </div>
+                            </div>
+                            <div className="price">  {product.price} €</div>
                         </div>
                     ))}
                 </div>

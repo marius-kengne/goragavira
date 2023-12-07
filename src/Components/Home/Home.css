@@ -1,0 +1,20 @@
+.homeImage{
+    width: 200px;
+}
+
+.main{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.bienvenue{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Georgia, serif	;
+    margin: 5px;
+    color: black;
+}
+
+.texthome{
+padding-bottom: 10px;
+}

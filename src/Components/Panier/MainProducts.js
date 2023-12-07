@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import ProductList from './ProductList';
+import ProductList from '../Panier/ProductList';
 import CartView from './CartView';
 
 const MainProducts = () => {

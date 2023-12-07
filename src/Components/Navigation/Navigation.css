@@ -1,0 +1,80 @@
+.navMobile{
+    display: none;
+	@media screen and (max-width: 768px) {
+        display: block;
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		padding: 0px;
+		margin: 0px;
+		color: black;
+		background: black;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+	}
+
+    .but-mobile{
+        border-radius: 4px;
+        padding: 10px 22px;
+        color: rgb(110, 106, 106);
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            color: rgb(55, 52, 52);
+        }
+        &.active {
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    .but-compte{
+        border-radius: 4px;
+        padding: 5px ;
+        color: rgb(110, 106, 106);
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            color: rgb(55, 52, 52);
+        }
+        &.active {
+            color: rgb(255, 255, 255);
+        }
+
+        .session{
+            padding-right: 5px;
+        }
+    }
+
+}
+
+.logo{
+    width: 150px;
+    height: 45px;
+    margin-top: 5.5px;
+}
+
+.header{
+    display: none;
+	@media screen and (max-width: 768px) {
+	width : 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 12;
+    position: fixed;
+	}
+}
+
+a:-webkit-any-link{
+    text-decoration:none;    
+    color: rgb(20, 19, 19);
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: rgb(55, 52, 52);
+    }
+}
+
+.txt{
+    color: white;
+    margin-right: 5px;
+    font-family: Georgia, serif;
+}

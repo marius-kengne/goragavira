@@ -65,6 +65,7 @@ body {
 }
  
 .produit {
+    font-family: Georgia, serif;
     background-color: rgb(255, 245, 245);
     border: 1px solid #1b4e1f;
     border-radius: 10%;
@@ -82,6 +83,7 @@ body {
 }
  
 .produit img {
+    font-family: Georgia, serif;
     max-width: 150px;
     /* Increased image size */
     height: auto;
@@ -115,6 +117,7 @@ body {
 /* Cart Checkout */
 .cart {
     flex: 1;
+    font-family: Georgia, serif;
     min-width: 300px;
     margin-top: 3%;
     background-color: #fff9e6;
@@ -145,17 +148,24 @@ body {
 }
  
 .panier-item {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    font-family: Georgia, serif;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
-    padding: 10px;
+    margin: 0px;
+    padding: 30px;
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
 }
+
+/* .affichage-item{
+    display: inline;
+} */
  
 .panier-item .item-image img {
     max-width: 90px;
+    font-family: Georgia, serif;
     height: auto;
     margin-right: 20px;
     border-radius: 50%;
@@ -173,6 +183,7 @@ body {
 }
  
 .panier-item h3 {
+    font-family: Georgia, serif;
     display: inline;
     font-size: 1.4rem;
     margin: 0;
@@ -192,22 +203,25 @@ body {
 }
  
 .panier-item .item-actions button {
-    background-color: #6cc24a;
+    background-color: #000000;
+    font-family: Georgia, serif;
     border: none;
     color: white;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     font-size: 1rem;
+    margin-top: 20px;
  
 }
  
 .panier-item .item-actions button:hover {
-    background-color: #449e30;
+    background-color: #434343;
 }
  
 .panier-item .quantite {
+    font-family: Georgia, serif;
     display: flex;
     flex-direction: row;
     margin-left: 15px;
@@ -216,6 +230,7 @@ body {
 }
  
 .panier .total {
+    font-family: Georgia, serif;
     font-size: 1.4rem;
     margin: 20px 0;
     text-align: right;
@@ -223,6 +238,7 @@ body {
 }
  
 .panier .checkout-button {
+    font-family: Georgia, serif;
     background-color: #6cc24a;
     border: none;
     color: white;
@@ -231,7 +247,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     font-size: 1.2rem;
-    float: left;
+    float: right;
     
 }
  
@@ -293,10 +309,12 @@ body {
 .item-info {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
  
 .item-details {
     margin-top: 4%;
+    margin-left: 20px;
 }
  
 .item-actions .quantite p {
@@ -309,14 +327,17 @@ body {
 }
  
 .checkout-section {
-    float: right;
-    /*margin: 0;*/
+    /* float: right; */
+    margin: 0;
     margin-right: 500px;
     margin-left: 500px;
 }
  
 .checkout-section .checkout-button {
     background-color: #323754;
+    margin-bottom: 50px;
+    float: right;
+    border-radius: 10px;
 }
  
 .checkout-section .checkout-button:hover {
@@ -324,6 +345,6 @@ body {
 }
 
 .panier{
-    margin-top: 50px;
+    padding-top: 150px;
     min-height: 500px;
 }
