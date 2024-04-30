@@ -1,5 +1,6 @@
-Plateforme E-commerce de vente de vêtements : https://goragavira.vercel.app
+Plateforme E-commerce de vente de vêtements : 
   -
+  Lien de la plateforme : https://goragavira.vercel.app
   -  Avoir la liste des vêtements disponible
   -  Recherche un vêtement particulier (une marque, un design précis, etc ...)
   -  Choisir un vêtement et réaliser le paiement
